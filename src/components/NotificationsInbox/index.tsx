@@ -26,8 +26,14 @@ import useOnClickOutside from 'use-onclickoutside';
       selected: false
     },
   ]
+
+  interface Iprops {
+    showModal: boolean,
+    setShowModal: (active: boolean) => void
+  }
   
-  export const NotificationsInbox = ({showModal, setShowModal}) => {
+  const NotificationsInbox:React.FC<Iprops> = ({showModal, setShowModal}) => {
+    // const [showModal, setShowModal] = useState(false);
 
     const modalRef = useRef<HTMLDivElement>(null);
   
@@ -82,3 +88,5 @@ import useOnClickOutside from 'use-onclickoutside';
       </>
     );
   };
+
+export default NotificationsInbox;

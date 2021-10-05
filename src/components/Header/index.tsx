@@ -4,7 +4,7 @@ import { Container, Content, LogoContainer, Logo, DivSearch, SearchInput, Divide
    IconButtonSearch, OptionsContainer, UploadDiv, MessageIcon, InboxIcon, InboxDiv, AvatarDiv,
    ActionsEnterDone, HeaderSettingWrap, SearchIconManual } from './styles';
 
-import {NotificationsInbox} from '../NotificationsInbox';
+import NotificationsInbox from '../NotificationsInbox';
 
 const profileOptions = [
   {
