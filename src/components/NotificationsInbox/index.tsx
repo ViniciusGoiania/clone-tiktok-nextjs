@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react';
+import React, {useState, useRef, useEffect, useCallback, ChangeEvent} from 'react';
 import { MainContainer, Inbox, InboxContentHeader, InboxContentNotification,
    GroupWrap, SpanContentWrap, NoticeList, InboxEmpty } from './styles';
 
@@ -37,10 +37,8 @@ import useOnClickOutside from 'use-onclickoutside';
 
     const modalRef = useRef<HTMLDivElement>(null);
   
-    const closeModal = e => {
-      if(modalRef.current === e.target) {
+    const closeModal = () => {
         setShowModal(false);
-      }
     };
   
     const keyPress = useCallback(e => {
