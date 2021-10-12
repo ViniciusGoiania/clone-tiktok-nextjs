@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { FooterContainer, FooterContent, TiktokLogoFooter, LogoContainerFooter, LogoIconFooter,
    LogoTextFooter, FooterContentColumn, FooterBottom, FooterLanguage, LanguageSelect, CopyrightBottom } from './styles';
@@ -22,9 +23,8 @@ const footerColumns = [
   },
 ]
 
-const Footer: React.FC = () => { 
-  return (
-    <FooterContainer>
+const Footer: React.FC = () => (
+    <FooterContainer> 
       <FooterContent>
         <TiktokLogoFooter>
           <LogoContainerFooter>
@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
         {footerColumns.map((itemColumn, index) => (
           <FooterContentColumn key={index}>
             <h4>{itemColumn.title}</h4>
-           {itemColumn.columnName.map((subColumn, index) => (
-            <span key={index}>
-              <a href="" >                   
+           {itemColumn.columnName.map((subColumn, indexsub) => (
+            <span key={indexsub}>
+              <a href="/" >                   
                 <h5>{subColumn}</h5>
               </a>
             </span>
@@ -52,12 +52,11 @@ const Footer: React.FC = () => {
           <span>English</span>
         </p>
         <img src="/images/arrow-down-footer.svg" alt="" />
-        <LanguageSelect></LanguageSelect>
+        <LanguageSelect />
       </FooterLanguage>
       <CopyrightBottom>© 2021 TikTok</CopyrightBottom>
     </FooterBottom>
   </FooterContainer>
-  );
-}
+  )
 
 export default Footer;

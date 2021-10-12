@@ -45,25 +45,25 @@ const PostCard: React.FC<IPost> = ({post}) => {
       </AvatarFeed>
       <FeedItemContent>
         <AuthorInforContainer>
-          <a href="">
+          <a href="/">
             <h3>{post?.author?.username}</h3>
           </a>
-          <a href="">
+          <a href="/">
             <h4>{post?.author?.name}</h4>
           </a>
         </AuthorInforContainer>
         <MetaCaption>
         <strong>{post?.description}</strong>
-        <a href=""><strong>@nomedeusuariomencionado</strong></a>
+        <a href="/"><strong>@nomedeusuariomencionado</strong></a>
         </MetaCaption>
         <FollowWrapperButton>
-          <button>Follow</button>
+          <button type="submit">Follow</button>
         </FollowWrapperButton>
         <MusicInfo>
           <h4>
-            <a href="">
+            <a href="/">
               <div>
-                <img src="/images/song-discover-list.svg"/>
+                <img src="/images/song-discover-list.svg" alt=""/>
                  {post?.songName}
               </div>
             </a>

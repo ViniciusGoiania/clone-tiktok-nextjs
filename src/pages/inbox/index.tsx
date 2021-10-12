@@ -5,23 +5,21 @@ import RightBarMessage from '../../components/RightBarMessage';
 import BackContainer from '../../components/BackContainer';
 import SideBarMessage from '../../components/SideBarMessage';
 
-const LayoutInbox: React.FC = () => {
-  return (
+const LayoutInbox: React.FC = () => (
     <DesktopContainer>
-    <Header></Header>
+    <Header />
     <MainBodyInbox>
       <SharedLayout>
         <SharedContent>
           <SharedLayoutMessage>
             <BackContainer />
-            <SideBarMessage></SideBarMessage>
-            <RightBarMessage></RightBarMessage>
+            <SideBarMessage />
+            <RightBarMessage />
           </SharedLayoutMessage>
         </SharedContent>
       </SharedLayout>
     </MainBodyInbox>
     </DesktopContainer>
-  );
-}
+  ) 
 
 export default LayoutInbox;

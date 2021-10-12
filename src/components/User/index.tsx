@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { UserItem, UserItemInner, UserAvatar, ImageWrap, TiktokAvatar, UserInfos, UserTitle, UserDesc } from './styles';
 
@@ -29,10 +30,9 @@ const staticRecommendForYou = [
   },
 ];
 
-const User: React.FC = () => {
-  return(
+const User: React.FC = () => (
     <>
-    {staticRecommendForYou.map((user, index) =>(
+    {staticRecommendForYou.map((user, index) => (
     <UserItem key={index}>
       <UserItemInner>
         <UserAvatar>
@@ -52,8 +52,7 @@ const User: React.FC = () => {
     </UserItem>
     ))}
    </>
-  );
-}
+  )
 
 export default User;
 

@@ -5,10 +5,9 @@ import Uploader from '../../components/Uploader';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-const LayoutUpload: React.FC = () => {
-  return (
+const LayoutUpload: React.FC = () => (
     <DesktopContainer>
-      <Header></Header>
+      <Header />
       <MainBody>
         <LayoutBg>
           <Container>
@@ -21,11 +20,10 @@ const LayoutUpload: React.FC = () => {
               <FormUploader />
             </Contents>
           </Container>
-        </LayoutBg>
+        </LayoutBg> 
       </MainBody>
       <Footer />
     </DesktopContainer>
-  );
-}
+  )
 
 export default LayoutUpload;

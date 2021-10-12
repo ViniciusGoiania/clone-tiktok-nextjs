@@ -2,8 +2,7 @@ import React from 'react';
 import { UploaderContainer, UploaderUp, UploaderBtn, UploaderCardBefore, ImageUploader,
    TextMainUploader, TextSubUploader, TextInfoVideoUploader, FileSelectButton } from './styles';
 
-const Uploader: React.FC = () => {
-  return (
+const Uploader: React.FC = () => (
     <UploaderContainer>                
     <UploaderUp>
       <UploaderBtn>
@@ -23,8 +22,7 @@ const Uploader: React.FC = () => {
         </UploaderCardBefore>
       </UploaderBtn>
     </UploaderUp>
-  </UploaderContainer>    
-  );
-}
+  </UploaderContainer>
+  )
 
 export default Uploader;

@@ -1,44 +1,61 @@
-import React, {useState} from 'react';
-import Link from 'next/link';
-import { Container, Content, LogoContainer, Logo, DivSearch, SearchInput, DividerBar,
-   IconButtonSearch, OptionsContainer, UploadDiv, MessageIcon, InboxIcon, InboxDiv, AvatarDiv,
-   ActionsEnterDone, HeaderSettingWrap, SearchIconManual } from './styles';
+/* eslint-disable react/no-array-index-key */
+import React, { useState } from 'react'
+import Link from 'next/link'
+import {
+  Container,
+  Content,
+  LogoContainer,
+  Logo,
+  DivSearch,
+  SearchInput,
+  DividerBar,
+  IconButtonSearch,
+  OptionsContainer,
+  UploadDiv,
+  MessageIcon,
+  InboxIcon,
+  InboxDiv,
+  AvatarDiv,
+  ActionsEnterDone,
+  HeaderSettingWrap,
+  SearchIconManual,
+} from './styles';
 
 import NotificationsInbox from '../NotificationsInbox';
 
 const profileOptions = [
   {
-    image: "/images/user-profile.svg",
-    menuName: "View profile"
+    image: '/images/user-profile.svg',
+    menuName: 'View profile',
   },
   {
-    image: "/images/coins-profile.svg",
-    menuName: "Get coins"
+    image: '/images/coins-profile.svg',
+    menuName: 'Get coins',
   },
   {
-    image: "/images/settings-profile.svg",
-    menuName: "Settings"
+    image: '/images/settings-profile.svg',
+    menuName: 'Settings',
   },
   {
-    image: "/images/language-profile.svg",
-    menuName: "English"
+    image: '/images/language-profile.svg',
+    menuName: 'English',
   },
   {
-    image: "/images/feedback-profile.svg",
-    menuName: "Feedback and help"
+    image: '/images/feedback-profile.svg',
+    menuName: 'Feedback and help',
   },
   {
-    image: "/images/keyboard-profile.svg",
-    menuName: "Keyboard shortcuts"
-  }
+    image: '/images/keyboard-profile.svg',
+    menuName: 'Keyboard shortcuts',
+  },
 ]
 
 const Header: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
 
   const openModal = () => {
-    setShowModal(prev => !prev);
-  };
+    setShowModal(prev => !prev)
+  }
 
   return (
     <Container>
@@ -59,7 +76,7 @@ const Header: React.FC = () => {
           <Link href="/upload">
             <UploadDiv>
               <span>
-                <img src="/images/upload-wrapper.svg" />
+                <img src="/images/upload-wrapper.svg" alt="imag" />
               </span>
             </UploadDiv>
           </Link>
@@ -71,42 +88,49 @@ const Header: React.FC = () => {
           <InboxIcon>
             <InboxDiv onClick={openModal}>
               <span>
-                <img src="/images/inbox-wrapper.svg" />
+                <img src="/images/inbox-wrapper.svg" alt="imag" />
               </span>
             </InboxDiv>
-            <NotificationsInbox showModal={showModal} setShowModal={setShowModal} />
-          </InboxIcon>          
+            <NotificationsInbox
+              showModal={showModal}
+              setShowModal={setShowModal}
+            />
+          </InboxIcon>
           <AvatarDiv>
             <span>
               <span>
-                <img src="/images/avatar-default.jpeg" />
+                <img src="/images/avatar-default.jpeg" alt="imag" />
               </span>
             </span>
             <ActionsEnterDone>
               <img src="" alt="" />
               <HeaderSettingWrap>
-              {profileOptions.map((item, index) => (
-              <div key={index}>
-                <a href="">
-                  <i><img src={item.image} /></i>
-                  {item.menuName}
-                </a>
-              </div>
-              ))}
-              <hr />
-              <div>
-                <a href="">
-                  <i><img src="/images/logout-profile.svg" /></i>
-                Log out
-                </a>
-              </div>
+                {profileOptions.map((item, index) => (
+                  <div key={index}>
+                    <a href="/">
+                      <i>
+                        <img src={item.image} alt="imag" />
+                      </i>
+                      {item.menuName}
+                    </a>
+                  </div>
+                ))}
+                <hr />
+                <div>
+                  <a href="/">
+                    <i>
+                      <img src="/images/logout-profile.svg" alt="imag" />
+                    </i>
+                    Log out
+                  </a>
+                </div>
               </HeaderSettingWrap>
-            </ActionsEnterDone>            
+            </ActionsEnterDone>
           </AvatarDiv>
         </OptionsContainer>
       </Content>
     </Container>
-  );
+  )
 }
 
-export default Header;
+export default Header

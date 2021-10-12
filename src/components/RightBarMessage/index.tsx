@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container, ContentContainer } from './styles';
 
-const RightBarMessage: React.FC = () => {
-  return (
+const RightBarMessage: React.FC = () => (
     <Container>
-      <ContentContainer></ContentContainer>
+      <ContentContainer />
     </Container>
-  );
-}
-
+  )
+ 
 export default RightBarMessage;

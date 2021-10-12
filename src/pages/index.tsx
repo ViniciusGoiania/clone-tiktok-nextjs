@@ -1,20 +1,18 @@
 import React from 'react';
+import { GetServerSideProps } from 'next';
 import Layout from '../components/Layout';
 import Feed from '../components/Feed';
-import { GetServerSideProps } from 'next';
 import {openDB} from '../lib/openDB';
 
 interface IProps {
   posts: []
 }
 
-const Home: React.FC<IProps> = ({posts}) => {
-  return (
+const Home: React.FC<IProps> = ({posts}) => (
     <Layout>
-      <Feed posts={posts}></Feed>
+      <Feed posts={posts} />
     </Layout>
-  );
-}
+  )
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const db = await openDB();

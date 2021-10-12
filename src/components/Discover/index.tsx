@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { DiscoverTitle, DiscoverList, DicoverListContainer, DiscoverItemContainer } from './styles';
 
@@ -44,16 +45,15 @@ const staticTags = [
   },
 ];
 
-const Discover: React.FC = () => {
-  return (
+const Discover: React.FC = () => (
     <DicoverListContainer>
       <DiscoverTitle>Discover</DiscoverTitle>
       <DiscoverList>
         {staticTags.map((item, index) => (
-          <a href="" key={index}>
+          <a href="/" key={index}>
             <DiscoverItemContainer>
-              <div>
-                <img src={item.icon} />
+              <div> 
+                <img src={item.icon} alt="" />
               </div>
               <span>{item.description}</span>
             </DiscoverItemContainer>
@@ -61,7 +61,6 @@ const Discover: React.FC = () => {
         ))}
       </DiscoverList>
     </DicoverListContainer>
-  );
-}
+  )
 
 export default Discover;

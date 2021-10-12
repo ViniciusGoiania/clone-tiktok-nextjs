@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 
 import { Form, CaptionWrap, CaptionContainer, TextContainer, TitleFont, RequireFont,
@@ -39,8 +40,7 @@ const FormUploader: React.FC = () => {
                 <EditorCaption>
                   <DrafEditorRoot>
                     <DrafEditorContainer>
-                      <DrafEditorContent maxLength={150} onChange={e => getCount(e.target.value.length)}>
-                      </DrafEditorContent>
+                      <DrafEditorContent maxLength={150} onChange={e => getCount(e.target.value.length)} />
                     </DrafEditorContainer>
                   </DrafEditorRoot>
                 </EditorCaption>
@@ -67,7 +67,7 @@ const FormUploader: React.FC = () => {
           <TikTokSelect>
             <TikTokSelector>
               <TikTokSelectorLeft>
-                <div></div>
+                <div/>
                 <span>Friends</span>
               </TikTokSelectorLeft>
               <TikTokSelectorIcon>
@@ -82,7 +82,7 @@ const FormUploader: React.FC = () => {
             {checkLabels.map((itemCheckBox, index) => (
               <LabelCheckBox key={index}>
                 <input type="text" />
-                <span></span>
+                <span/>
                 {itemCheckBox.checklabel}
               </LabelCheckBox>              
             ))}

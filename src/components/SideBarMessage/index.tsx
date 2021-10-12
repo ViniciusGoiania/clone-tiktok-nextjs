@@ -2,8 +2,7 @@ import React from 'react';
 import { Container, ListWrapper, ListWrapperHeader, ListContent,
    MessageContainer, MessageContent, ScrollbarDiv, EmptyList } from './styles';
 
-const SideBarMessage: React.FC = () => {
-  return (
+const SideBarMessage: React.FC = () => (
     <Container>
       <ListWrapper>
         <ListWrapperHeader>
@@ -18,13 +17,12 @@ const SideBarMessage: React.FC = () => {
               </EmptyList>
             </MessageContent>
             <ScrollbarDiv>
-              <div></div>
+              <div />
             </ScrollbarDiv>
           </MessageContainer>
         </ListContent>
       </ListWrapper>
     </Container>
-  );
-}
+  )
 
 export default SideBarMessage;

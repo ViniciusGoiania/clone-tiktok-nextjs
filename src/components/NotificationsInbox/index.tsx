@@ -1,4 +1,6 @@
-import React,{useRef, useEffect, useCallback } from 'react'
+/* eslint-disable react/no-array-index-key */
+import React,{useRef, useEffect, useCallback } from 'react';
+import useOnClickOutside from 'use-onclickoutside';
 import {
   MainContainer,
   Inbox,
@@ -6,7 +8,6 @@ import {
   InboxContentNotification,
    GroupWrap, SpanContentWrap, NoticeList, InboxEmpty } from './styles';
 
-import useOnClickOutside from 'use-onclickoutside';
 
   const notifactionsGroupWrap = [
     {
@@ -39,11 +40,7 @@ import useOnClickOutside from 'use-onclickoutside';
   const NotificationsInbox:React.FC<Iprops> = ({showModal, setShowModal}) => {
 
     const modalRef = useRef<HTMLDivElement>(null);
-  
-    const closeModal = () => {
-        setShowModal(false);
-    };
-  
+    
     const keyPress = useCallback(e => {
       if(e.key === 'Escape' && showModal) {
         setShowModal(false);
