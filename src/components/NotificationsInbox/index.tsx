@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect, useCallback, ChangeEvent} from 'react';
+import React, {useState, useRef, useEffect, useCallback} from 'react';
 import { MainContainer, Inbox, InboxContentHeader, InboxContentNotification,
    GroupWrap, SpanContentWrap, NoticeList, InboxEmpty } from './styles';
 
@@ -15,7 +15,7 @@ import useOnClickOutside from 'use-onclickoutside';
     },
     {
       nameNotifaction : "Comments", 
-      selected: false
+      selected: false 
     },
     {
       nameNotifaction : "Mentions",
