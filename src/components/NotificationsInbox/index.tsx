@@ -14,7 +14,7 @@ import useOnClickOutside from 'use-onclickoutside';
       selected: false
     },
     {
-      nameNotifaction : "Comments",
+      nameNotifaction : "Comments", 
       selected: false
     },
     {
