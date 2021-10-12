@@ -33,7 +33,6 @@ import useOnClickOutside from 'use-onclickoutside';
   }
   
   const NotificationsInbox:React.FC<Iprops> = ({showModal, setShowModal}) => {
-    // const [showModal, setShowModal] = useState(false);
 
     const modalRef = useRef<HTMLDivElement>(null);
   
