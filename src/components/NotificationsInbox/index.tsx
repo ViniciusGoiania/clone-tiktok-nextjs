@@ -1,5 +1,9 @@
-import React, {useState, useRef, useEffect, useCallback} from 'react';
-import { MainContainer, Inbox, InboxContentHeader, InboxContentNotification,
+import React,{useRef, useEffect, useCallback } from 'react'
+import {
+  MainContainer,
+  Inbox,
+  InboxContentHeader,
+  InboxContentNotification,
    GroupWrap, SpanContentWrap, NoticeList, InboxEmpty } from './styles';
 
 import useOnClickOutside from 'use-onclickoutside';
@@ -80,7 +84,7 @@ import useOnClickOutside from 'use-onclickoutside';
         </Inbox>
       </MainContainer>
       ) : null }
-      </>
+    </>
     );
   };
 
