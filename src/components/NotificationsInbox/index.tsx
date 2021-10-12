@@ -64,8 +64,6 @@ import useOnClickOutside from 'use-onclickoutside';
             <GroupWrap>
               {notifactionsGroupWrap.map((item, index) =>  (
               <SpanContentWrap active={item.selected === true}  
-                // onClick={() => (notifactionsGroupWrap[index].selected = !notifactionsGroupWrap[index].selected)}  just ideia                           
-                // onMouseLeave={() => item.selected = false}
                 key={index}>
                 {item.nameNotifaction}
               </SpanContentWrap>
